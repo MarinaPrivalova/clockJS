@@ -1,14 +1,15 @@
-@import url(./fonts/fonts.css);
 @import url(./vendor/normalize.css);
+@import url(./fonts/fonts.css);
 
 .page {
   background-color: #222831;
+  font-family: "Orbitron", sans-serif;
   max-width: 1440px;
   min-width: 320px;
+  margin: auto;
 }
 
 .clock {
-  /* border: 2px solid #393e46; */
   max-width: 720px;
   width: 100%;
   margin: 150px auto;
@@ -17,21 +18,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 5px #c7f5fe, 0 0 10px #c7f5fe, 0 0 20px #a9eee6,
-    0 0 40px #00adb5, 0 0 80px #00adb5, 0 0 90px #00adb5, 0 0 100px #00adb5,
-    0 0 150px #00adb5;
-    /*animation: changeBg 5s infinite alternate linear;*/
 }
 
 .clock__figure {
   color: #00adb5;
-  font-size: 150px;
-  font-family: "Orbitron", sans-serif;
+  font-size: 120px;
   font-weight: 700;
   margin: 0;
- /*  text-shadow: 0 0 5px #c7f5fe, 0 0 10px #c7f5fe, 0 0 20px #a9eee6,
-    0 0 40px #00adb5, 0 0 80px #00adb5, 0 0 90px #00adb5, 0 0 100px #00adb5,
-    0 0 150px #00adb5; */
+  text-shadow: 0 0 5px #c7f5fe, 0 0 10px #c7f5fe, 0 0 15px #a9eee6,
+    0 0 20px #00adb5, 0 0 30px #00adb5, 0 0 40px #00adb5, 0 0 50px #00adb5;
 }
 
 .inside {
@@ -49,9 +44,8 @@
   height: 5px;
   position: absolute;
   border-radius: 4px;
-  box-shadow: 0 0 5px #c7f5fe, 0 0 10px #c7f5fe, 0 0 20px #a9eee6,
-    0 0 40px #00adb5, 0 0 80px #00adb5, 0 0 90px #00adb5, 0 0 100px #00adb5,
-    0 0 150px #00adb5;
+  box-shadow: 0 0 2px #c7f5fe, 0 0 4px #a9eee6,
+    0 0 6px #00adb5, 0 0 8px #00adb5, 0 0 10px #00adb5;
 }
 
 .inside__spinner_top {
@@ -65,24 +59,6 @@
   right: 0;
   animation: changePosRev 10s linear alternate infinite;
 }
-
-/* @keyframes changeBg {
-  0% {
-    background-color: #485c64;
-  }
-  25% {
-    background-color: #444c54;
-  }
-  50% {
-    background-color: #343c3c;
-  }
-  75% {
-    background-color: #18242c;
-  }
-  100% {
-    background-color: #222831;
-  }
-} */
 
 @keyframes changePos {
   from {
@@ -101,5 +77,29 @@
   }
   to {
     transform: translateX(-648px) translateY(0px);
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .clock__figure {
+    font-size: 90px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .inside__spinner {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .clock__figure {
+    font-size: 58px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .clock {
+    max-width: 300px;
   }
 }
