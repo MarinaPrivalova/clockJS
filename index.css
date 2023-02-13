@@ -62,8 +62,7 @@
 
 @keyframes changePos {
   from {
-    top(0);
-    left(0);
+    transform: translateX(0px) translateY(0px);
   }
   to {
     transform: translateX(648px) translateY(0px);
@@ -72,8 +71,7 @@
 
 @keyframes changePosRev {
   from {
-    bottom(0);
-    right(0);
+    transform: translateX(0px) translateY(0px);
   }
   to {
     transform: translateX(-648px) translateY(0px);
