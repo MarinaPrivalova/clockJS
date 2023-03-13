@@ -11,20 +11,17 @@
 
 .clock {
   max-width: 720px;
-  width: 100%;
+  width: 90%;
   margin: 150px auto;
   border-radius: 20px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .clock__figure {
+  width: fit-content;
   color: #00adb5;
   font-size: 120px;
   font-weight: 700;
-  margin: 0;
+  text-align: center;
   text-shadow: 0 0 5px #c7f5fe, 0 0 10px #c7f5fe, 0 0 15px #a9eee6,
     0 0 20px #00adb5, 0 0 30px #00adb5, 0 0 40px #00adb5, 0 0 50px #00adb5;
 }
@@ -32,10 +29,8 @@
 .inside {
   position: relative;
   width: 90%;
-  height: 90%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .inside__spinner {
